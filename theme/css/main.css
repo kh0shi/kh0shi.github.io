@@ -1,0 +1,261 @@
+@import url("pygment.css");
+/*
+    Theme Name: mnmlist
+    Theme URI: http://mathieu.agopian.info/mnmlist/theme.html
+    Description: Theme adapted from http://mnmlist.com/theme/ from Leo Babauta, a very clean minimalist theme, without comments, search, archives or other features.
+    Author: Mathieu Agopian
+    Autor URI: http://mathieu.agopian.info
+
+    This theme is uncopyrighted, free, and offered as is.
+*/
+/* line 13, ../../compass/src/main.scss */
+
+@font-face {
+  font-family: dirooz;
+  font-weight: normal;
+  src: url('../fonts/Dirooz.ttf') format('truetype');
+}
+@font-face {
+  font-family: lalehzar;
+  font-weight: normal;
+  src: url('../fonts/Lalezar-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: vazirfd;
+  font-weight: normal;
+  src: url('../fonts/Vazir-FD.ttf') format('truetype');
+}
+
+body {
+  background: #fff;
+  color: #333;
+  font: 16px dirooz;
+  line-height: 30px;
+  direction: rtl;
+  text-align: right;
+  overflow-x: hidden;
+  margin:0;
+  height:100vh;
+  display:flex; 
+  flex-direction:column;
+  max-width: 32em;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* line 28, ../../compass/src/main.scss */
+h1 {
+  color: #333333;
+  font-family: dirooz;
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+/* line 34, ../../compass/src/main.scss */
+h2 {
+  color: #666666;
+  font-family: dirooz;
+  font-size: 1.3em;
+}
+
+/* line 38, ../../compass/src/main.scss */
+h3 {
+  color: #666666;
+  font-family: dirooz;
+  font-size: 1em;
+}
+
+/* line 42, ../../compass/src/main.scss */
+h4 {
+  color: #666666;
+  font-family: dirooz;
+  font-size: 0.9em;
+}
+
+/* line 46, ../../compass/src/main.scss */
+time {
+  color: #c0c0c0;
+  font-size: .6em;
+  margin: 0 2em;
+}
+
+/* line 51, ../../compass/src/main.scss */
+img {
+  border: none;
+  max-width: 100%;
+  margin: auto;
+  display: block;
+}
+
+/* line 55, ../../compass/src/main.scss */
+blockquote {
+  border-left: 1px solid #A5ABAB;
+  margin: 0px;
+  padding: 0 12px 0 12px;
+}
+
+/* line 61, ../../compass/src/main.scss */
+p {
+  line-height: 2em;
+  margin: 1em auto;
+  text-indent: 0px;
+  text-align: justify;
+}
+/* line 65, ../../compass/src/main.scss */
+p.caption {
+  font-size: .8em;
+  margin-top: 0;
+}
+
+/* line 71, ../../compass/src/main.scss */
+a {
+  border-bottom: #999 1px solid;
+  color: #303030;
+  text-decoration: none;
+}
+/* line 75, ../../compass/src/main.scss */
+a:hover {
+  color: #999;
+}
+
+/* line 78, ../../compass/src/main.scss */
+ul, ol {
+  padding: .5em 3.2em 1em 0em;
+}
+/* line 80, ../../compass/src/main.scss */
+ul li, ol li {
+  line-height: 30px;
+  padding: 6px 0 0 0;
+}
+/* farsi digits */
+li::marker {
+  font-family: vazirfd;
+  font-size: .9em;
+  font-weight: bold;
+}
+
+/* line 86, ../../compass/src/main.scss */
+strong {
+  color: #555555;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+
+/* line 92, ../../compass/src/main.scss */
+tt, pre {
+  background-color: #fafafa;
+  font-family: Inconsolata, Monaco, monospace;
+  line-height: 1.2em;
+}
+
+div.highlight {
+  direction: ltr;
+  text-align: left;
+}
+
+/* line 98, ../../compass/src/main.scss */
+pre {
+  font-size: 0.8em;
+  overflow: auto;
+  padding: 10px;
+}
+
+/* line 104, ../../compass/src/main.scss */
+header {
+  padding-bottom: 20px;
+}
+/* line 106, ../../compass/src/main.scss */
+header a {
+  border-bottom: none;
+}
+/* line 108, ../../compass/src/main.scss */
+header a#page-title {
+  font-family: lalehzar;
+  margin-right: .5em;
+  font-size: .9em;
+}
+
+/* line 112, ../../compass/src/main.scss */
+#article-list {
+  margin-top: 60px;
+}
+/* line 114, ../../compass/src/main.scss */
+#article-list ol li {
+  line-height: 1.2em;
+  list-style-type: none;
+  padding-bottom: 10px;
+}
+
+#article-list ol li a {
+  border: none;
+}
+
+/* line 121, ../../compass/src/main.scss */
+.note {
+  background: #efefef;
+  margin: 1em 0;
+}
+/* line 124, ../../compass/src/main.scss */
+.note p {
+  display: inline;
+}
+/* line 126, ../../compass/src/main.scss */
+.note p.first {
+  font-weight: bold;
+}
+/* line 128, ../../compass/src/main.scss */
+.note p.first:after {
+  content: ' : ';
+}
+
+/* line 135, ../../compass/src/main.scss */
+footer {
+  background: #fff;
+  color: #666;
+  border-top: 1px solid #aaa;
+  font-size: .9em;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+nav {
+  font-size: 13px;
+}
+/* line 142, ../../compass/src/main.scss */
+footer a, nav a {
+  border-bottom: none;
+  color: #c0c0c0;
+}
+/* line 146, ../../compass/src/main.scss */
+footer li, nav li {
+  display: inline;
+}
+
+#site-title {
+  font-family: lalehzar;
+  color: #444;
+}
+
+#theme-credit {
+  font-size: .7em;
+}
+
+#theme-credit a {
+  font-size: 1.1em;
+  font-family: helvetica, sans-serif;
+  letter-spacing: 4px;
+  margin-left: 1em;
+}
+
+hr {
+  border: none;
+  text-align: center;
+  margin-top: 20px;
+}
+hr::after {
+  content: '...';
+  text-align: center;
+  font-size: 2em;
+  color: #555;
+}
