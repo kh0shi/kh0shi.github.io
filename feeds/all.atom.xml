@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>وبلاگِ خوشی</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2022-02-22T00:00:00+03:30</updated><entry><title>ترمینال‌های رنگی</title><link href="/colorized-ssh.html" rel="alternate"></link><published>2022-02-22T00:00:00+03:30</published><updated>2022-02-22T00:00:00+03:30</updated><author><name>محمدحسین خوش‌مهر</name></author><id>tag:None,2022-02-22:/colorized-ssh.html</id><summary type="html">&lt;p&gt;چه طور بین ترمینال‌های مختلف گم نشیم و اشتباهی سرور پروداکشن رو ری‌استارت نکنیم؟&lt;/p&gt;</summary><content type="html">&lt;p&gt;من خیلی از اوقات مجبورم هم‌زمان با سرورهای مختلفی کار کنم و ترمینال‌های متعددی برای ssh زدن به هر کدام باز کنم. گاهی اوقات آن‌ها را با هم اشتباه می‌گیرم و پیش آمده که به جای سرور دولوپ، سرور پروداکشن را ری‌استارت کنم. حتما راه‌حل‌های مختلفی برای حل این مشکل هست. کاری که من کردم این بود:&lt;/p&gt;
+&lt;p&gt;برای هر کدام از سرورها، رنگی مشخص کردم و کاری کردم که وقتی به آن سرور وصل می‌شوم، ترمینال با رنگ خودش باز شود. در این صورت دیگر کمتر سرور آبی را با سرور قرمز اشتباه می‌گیرم!&lt;/p&gt;
+&lt;p&gt;مراحل اجرای این کار در اوبونتو از این قرار است:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ساختن کلید احراز هویت ssh و کپی کردنش تو سرورها&lt;/li&gt;
+&lt;li&gt;ذخیره یوزر و آدرس سرورها در کانفیگ ssh&lt;/li&gt;
+&lt;li&gt;ایجاد پروفایل‌های مختلف در تنظیمات GNOME Terminal&lt;/li&gt;
+&lt;li&gt;نوشتن alias برای دستور ssh&lt;/li&gt;
+&lt;li&gt;و یک تغییر اضافه برای تیماکسی‌ها&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;مرحله ۱ و ۲ را فقط برای این که این لیست کامل باشد نوشتم.&lt;/p&gt;
+&lt;h3&gt;۳. ایجاد پروفایل‌های مختلف در تنظیمات GNOME Terminal&lt;/h3&gt;
+&lt;p&gt;من از ترمینال پیش‌فرض اوبونتو استفاده می‌کنم. در تنظیمات آن می‌توان پروفایل‌های متفاوتی ایجاد کرد. همیشه برایم سوال بود که این پروفایل‌ها به چه کار می‌آیند که به جواب سوالم رسیدم.
+در Prefrences، پروفایل‌های جدیدی ایجاد کنید و نام پروفایل را برابر با نامی که در مرحله قبل برای هر سرور انتخاب کرده‌اید قرار دهید. بعد از ایجاد پروفایل، روی نامش کلیک کنید و در تب Colors، تیک گزینهٔ &lt;em&gt;Use colors from system theme&lt;/em&gt; را بردارید و رنگ دلخواه خود را تعیین کنید.&lt;/p&gt;
+&lt;h3&gt;۴. نوشتن alias برای دستور ssh&lt;/h3&gt;
+&lt;p&gt;متن زیر را متناسب با بش‌تان در zshrc. یا bashrc. یا هر جای دیگر که لازم است قرار دهید.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nv"&gt;custom_ssh&lt;/span&gt; &lt;span class="ss"&gt;()&lt;/span&gt; {
+  &lt;span class="k"&gt;if&lt;/span&gt; [[ &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;=~&lt;/span&gt; &lt;span class="o"&gt;^&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;dev&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="nv"&gt;api&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;$ ]]&lt;span class="c1"&gt;; then&lt;/span&gt;
+    &lt;span class="nv"&gt;gnome&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;terminal&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="nv"&gt;window&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;with&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;profile&lt;/span&gt; &lt;span class="mh"&gt;$1&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt; &lt;span class="nv"&gt;ssh&lt;/span&gt; &lt;span class="mh"&gt;$1&lt;/span&gt;
+  &lt;span class="k"&gt;else&lt;/span&gt;
+    &lt;span class="nv"&gt;ssh&lt;/span&gt; &lt;span class="mh"&gt;$1&lt;/span&gt;
+  &lt;span class="nv"&gt;fi&lt;/span&gt;
+}
+&lt;span class="nv"&gt;alias&lt;/span&gt; &lt;span class="nv"&gt;ssh&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="s"&gt;custom_ssh&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;نام سرور و پروفایلی که من انتخاب کرده بودم، dev و api بود. هر نامی که در دو مرحلهٔ قبل تعیین کردید را با این‌ها جایگزین کنید و اگر بیشتر هستند، با "|" از هم جدایشان کنید و در همان جا بنویسید.
+اجرای "source .bashrc" را بعد از ذخیره کردنش فراموش نکنید.
+این هم از نتیجهٔ کار:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ssh" src="../images/ssh.gif"&gt;&lt;/p&gt;
+&lt;p&gt;اگر بخواهید، می‌توانید برای ssh به سرورهای جدید هم پروفایلی بسازید تا با سیستم خودتان اشتباه‌شان نگیرید. من اسم این پروفایل را گذاشته‌ام "ssh". کافی است "ssh $1" که بعد از else آمده را با این جایگزین کنید:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;gnome-terminal --window-with-profile ssh -- ssh $1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;۵. یک تغییر اضافه برای تیماکسی‌ها&lt;/h3&gt;
+&lt;p&gt;من برای کار بر روی سیستم‌های ریموت از تیماکس استفاده می‌کنم. به صورتی که معمولا یک سشن به نام من روی آن سرور هست و پنجره‌های مختلفی روی آن باز است. این جا نمی‌خواهم از قابلیت‌های tmux بگویم. با این تغییر، بعد از اتصال به سرور، مستقیم به سشن مورد نظر وصل می‌شوم و یا اگر سشنی با آن نام وجود نداشته باشد، ساخته می‌شود. بدیهی است که از قبل باید tmux روی سرور نصب باشد.
+برای این کار کافی است به جای&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;gnome-terminal --window-with-profile $1 -- ssh $1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;این را جایگزین کنید:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt; gnome-terminal --window-with-profile $1 -- ssh $1 -t &amp;#39;tmux a -t khoshi || tmux new -s khoshi&amp;#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;تغییرات دیگری هم برای اتصال به vpn قبل از ssh به سرور (معمولا vpnهای سازمانی) هست که باشد برای بعد. در مورد دردسرهایم با vpnها و راه‌حل‌هایشان باید جداگانه توضیح دهم.&lt;/p&gt;</content><category term="فنی"></category><category term="لینوکس"></category><category term="ترمینال"></category></entry></feed>
