@@ -1,0 +1,8 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: *
+Allow: /
+
+Sitemap: http://khoshi.net/sitemap.xml
+Sitemap: https://khoshi.net/sitemap.xml

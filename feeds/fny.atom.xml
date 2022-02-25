@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>وبلاگِ خوشی - فنی</title><link href="/" rel="alternate"></link><link href="/feeds/fny.atom.xml" rel="self"></link><id>/</id><updated>2022-02-22T00:00:00+03:30</updated><entry><title>ترمینال‌های رنگی</title><link href="/colorized-ssh.html" rel="alternate"></link><published>2022-02-22T00:00:00+03:30</published><updated>2022-02-22T00:00:00+03:30</updated><author><name>محمدحسین خوش‌مهر</name></author><id>tag:None,2022-02-22:/colorized-ssh.html</id><summary type="html">&lt;p&gt;چه طور بین ترمینال‌های مختلف گم نشیم و اشتباهی سرور پروداکشن رو ری‌استارت نکنیم؟&lt;/p&gt;</summary><content type="html">&lt;p&gt;من خیلی از اوقات مجبورم هم‌زمان با سرورهای مختلفی کار کنم و ترمینال‌های متعددی برای ssh زدن به هر کدام باز کنم. گاهی اوقات آن‌ها را با هم اشتباه می‌گیرم و پیش آمده که به جای سرور دولوپ، سرور پروداکشن را ری‌استارت کنم. حتما راه‌حل‌های مختلفی برای حل این مشکل هست. کاری که من کردم این بود:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>وبلاگِ خوشی - فنی</title><link href="https://khoshi.net/" rel="alternate"></link><link href="https://khoshi.net/feeds/fny.atom.xml" rel="self"></link><id>https://khoshi.net/</id><updated>2022-02-24T00:00:00+03:30</updated><entry><title>ترمینال‌های رنگی</title><link href="https://khoshi.net/colorized-ssh.html" rel="alternate"></link><published>2022-02-24T00:00:00+03:30</published><updated>2022-02-24T00:00:00+03:30</updated><author><name>محمدحسین خوش‌مهر</name></author><id>tag:khoshi.net,2022-02-24:/colorized-ssh.html</id><summary type="html">&lt;p&gt;چه طور بین ترمینال‌های مختلف گم نشیم و اشتباهی سرور پروداکشن رو ری‌استارت نکنیم؟&lt;/p&gt;</summary><content type="html">&lt;p&gt;من خیلی از اوقات مجبورم هم‌زمان با سرورهای مختلفی کار کنم و ترمینال‌های متعددی برای ssh زدن به هر کدام باز کنم. گاهی اوقات آن‌ها را با هم اشتباه می‌گیرم و پیش آمده که به جای سرور دولوپ، سرور پروداکشن را ری‌استارت کنم. حتما راه‌حل‌های مختلفی برای حل این مشکل هست. کاری که من کردم این بود:&lt;/p&gt;
 &lt;p&gt;برای هر کدام از سرورها، رنگی مشخص کردم و کاری کردم که وقتی به آن سرور وصل می‌شوم، ترمینال با رنگ خودش باز شود. در این صورت دیگر کمتر سرور آبی را با سرور قرمز اشتباه می‌گیرم!&lt;/p&gt;
 &lt;p&gt;مراحل اجرای این کار در اوبونتو از این قرار است:&lt;/p&gt;
 &lt;ol&gt;
@@ -28,7 +28,7 @@
 &lt;p&gt;نام سرور و پروفایلی که من انتخاب کرده بودم، dev و api بود. هر نامی که در دو مرحلهٔ قبل تعیین کردید را با این‌ها جایگزین کنید و اگر بیشتر هستند، با "|" از هم جدایشان کنید و در همان جا بنویسید.
 اجرای "source .bashrc" را بعد از ذخیره کردنش فراموش نکنید.
 این هم از نتیجهٔ کار:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ssh" src="../images/ssh.gif"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ssh" src="https://bayanbox.ir/view/8127303786134084568/ssh.gif"&gt;&lt;/p&gt;
 &lt;p&gt;اگر بخواهید، می‌توانید برای ssh به سرورهای جدید هم پروفایلی بسازید تا با سیستم خودتان اشتباه‌شان نگیرید. من اسم این پروفایل را گذاشته‌ام "ssh". کافی است "ssh $1" که بعد از else آمده را با این جایگزین کنید:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;gnome-terminal --window-with-profile ssh -- ssh $1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
