@@ -114,6 +114,7 @@ a {
   border-bottom: #999 1px solid;
   color: #303030;
   text-decoration: none;
+  width: fit-content;
 }
 /* line 75, ../../compass/src/main.scss */
 a:hover {
@@ -256,7 +257,7 @@ hr {
 }
 hr::after {
   content: '...';
-  text-align: center;
   font-size: 2em;
-  color: #555;
+  color: #777;
+  letter-spacing: .5em;
 }
