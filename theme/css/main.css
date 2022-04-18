@@ -140,14 +140,12 @@ li::marker {
 /* line 86, ../../compass/src/main.scss */
 strong {
   color: #555555;
-  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: bold;
 }
 
 /* line 92, ../../compass/src/main.scss */
 tt, pre {
   background-color: #fafafa;
-  font-family: Inconsolata, Monaco, monospace;
   line-height: 1.2em;
 }
 
