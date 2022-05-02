@@ -176,6 +176,10 @@ header a#page-title {
   font-size: .9em;
 }
 
+article {
+  flex: 1 0 auto;
+}
+
 /* line 112, ../../compass/src/main.scss */
 #article-list {
   margin-top: 60px;
