@@ -196,6 +196,10 @@ article {
   border: none;
 }
 
+#article-list ol li a span {
+  display: inline-block;
+}
+
 /* line 121, ../../compass/src/main.scss */
 .note {
   background: #efefef;
