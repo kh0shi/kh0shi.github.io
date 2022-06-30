@@ -1,5 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>وبلاگِ خوشی</title><link href="https://khoshi.net/" rel="alternate"></link><link href="https://khoshi.net/feeds/all.atom.xml" rel="self"></link><id>https://khoshi.net/</id><updated>2022-05-25T00:00:00+04:30</updated><entry><title>اشتباه</title><link href="https://khoshi.net/mistake.html" rel="alternate"></link><published>2022-05-25T00:00:00+04:30</published><updated>2022-05-25T00:00:00+04:30</updated><author><name>محمدحسین خوش‌مهر</name></author><id>tag:khoshi.net,2022-05-25:/mistake.html</id><content type="html">&lt;p&gt;از &lt;a href="https://motamem.org/%d8%af%d8%b1%d8%b3-%da%af%d8%b1%d9%81%d8%aa%d9%86-%d8%b4%da%a9%d8%b3%d8%aa-%d9%85%d9%88%d9%81%d9%82%db%8c%d8%aa-%da%86%db%8c%d9%be-%d9%87%db%8c%d8%ab/"&gt;این&lt;/a&gt; پست متمم شروع شد. دعوت به گفت و گویی در مورد این جمله:
+<feed xmlns="http://www.w3.org/2005/Atom"><title>وبلاگِ خوشی</title><link href="https://khoshi.net/" rel="alternate"></link><link href="https://khoshi.net/feeds/all.atom.xml" rel="self"></link><id>https://khoshi.net/</id><updated>2022-06-30T00:00:00+04:30</updated><entry><title>سلیقه سینمایی من به روایت آمار</title><link href="https://khoshi.net/imdb.html" rel="alternate"></link><published>2022-06-30T00:00:00+04:30</published><updated>2022-06-30T00:00:00+04:30</updated><author><name>محمدحسین خوش‌مهر</name></author><id>tag:khoshi.net,2022-06-30:/imdb.html</id><content type="html">&lt;p&gt;برای مدت‌ها، تفریح اصلی من دیدن فیلم و سریال بود. هنوز هم هست، ولی نه به عنوان تفریح اصلی. از همان یکی دو سال اول برای پیدا کردنِ فیلمِ مناسب برای دیدن، گذرم به IMDb افتاد و یک حساب درست کردم و فیلم‌هایی که می‌دیدم را ثبت می‌کردم و امتیاز می‌دادم. امتیاز دادنم خیلی منظم نبود. ممکن بود فیلمی را فراموش کنم. معیار ثابتی هم برای امتیاز دادن نداشتم و صرفا یک چیزی ثبت می‌کردم. کم کم امتیاز دادن‌هایم چارچوبی پیدا کرد.&lt;br&gt;
+امتیازِ پیش‌فرض، ۵ است. اگر فیلم را تا پایان، کامل ببینم، حداقل ۵ را می‌گیرد. اگر به هر دلیلی حوصله‌ام سر برود و فیلم را جلو بزنم یا نصفه رهایش کنم، متناسب با میزانی که بدم آمده از امتیازش کم می‌شود. هیچ وقت امتیاز ۱ نداده‌ام. هیچ وقت مجبور به دیدن چنین فیلمی نشده‌ام. این فیلم‌ها را بدون دیدن هم می‌شود تشخیص داد و کنارشان گذاشت.&lt;br&gt;
+اگر فیلمی خوش ساخت باشد، می‌آید روی ۶. اگر غیر از آن چیز دیگری هم داشته باشد که خوشم بیاید، ممکن است تا ۸ هم برسد. ۸ به بالاها را معمولا می‌شود به دیگران هم پیشنهاد کرد. ۹ برای فیلم هایی است که چیزی ازشان می‌ماند. گاها بهشان فکر می‌کنم. ممکن است دوباره ببینمشان. ۱۰ها، ۹های عالی‌اند. کم اشتباه. آن هایی که هر وقت ببینمشان باز مزه می‌دهد. این ها معمولا جنبه شخصی پیدا می‌کنند. ممکن است نتوانم با کلمات توضیح دهم که یک فیلم چرا ۱۰ شده ولی تجربهٔ دیدنش فراتر از تصویر و صدا رفته. همان طور که گفتم، نمی‌توانم درست توضیحش دهم.&lt;/p&gt;
+&lt;p&gt;مدتی پیش در IMDb بودم و داشتم لیست فیلم‌هایی که دیده‌ام را نگاه می‌کردم که متوجه شدم می‌توانم ازشان خروجی بگیرم و در قالب یک فایل csv دانلودشان کنم. شما وقتی فایل csv می‌بینید یاد چه می‌افتید؟ درست است. &lt;a href="https://pandas.pydata.org/"&gt;Pandas&lt;/a&gt;!&lt;br&gt;
+یک نوتبوک باز کردم و فایل را لود کردم و شروع کردم به ور رفتن با آن. کار خاصی هم نکردم، صرفا کمی جمع و تفریق و کمی نمودار کشیدن. نتیجه‌اش در زیر آمده.&lt;/p&gt;
+&lt;p&gt;چه اطلاعاتی در این فایل وجود دارد؟&lt;/p&gt;
+&lt;p&gt;&lt;img alt="head" src="https://bayanbox.ir/view/2636092278390815595/head.png"&gt;&lt;/p&gt;
+&lt;p&gt;سرجمع چند عنوان فیلم و سریال دیده‌ام؟&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;type       count
+________________
+movie:       853
+short:        10
+tvMiniSeries: 13
+tvSeries:     59
+tvSpecial:     8
+video:         4
+Total:       947
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;که مجموع زمانشان می‌شود:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;219397&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;mins&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;152.36&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;days&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;میانگین امتیازی که من به فیلم‌ها داده‌ام، حدودا ۱ امتیاز پایین‌تر از میانگینِ کل کاربران است. برای مقایسهٔ تعداد فیلم‌ها بر اساس امتیازات، می‌شود نگاهی به این نمودار انداخت:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ratings distribution" src="https://bayanbox.ir/view/7333950525426551750/rating-distribution.png"&gt;&lt;/p&gt;
+&lt;p&gt;همین طور که مشخص است، امتیاز محبوب من (!) ۷ است. به هیچ فیلمی هم ۱ نداده‌ام. ۲ و ۳ و ۴ هم سهم بسیار کمی را به خود اختصاص داده‌اند. با دست باز صحیح می‌کنم.&lt;/p&gt;
+&lt;p&gt;بهترین عناوین در هر نوع از نظر من:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="top 5" src="https://bayanbox.ir/view/4976716865198463895/top-of-each-kind.png"&gt;&lt;/p&gt;
+&lt;p&gt;از آنجایی که کلا ۴ video دیده‌ام (اصلا فرق video با movie چیست؟) هر ۴ تایشان در لیست حضور دارند.&lt;/p&gt;
+&lt;p&gt;فیلم‌هایی که دیده‌ام تولید چه سال‌هایی بوده‌اند؟&lt;/p&gt;
+&lt;p&gt;&lt;img alt="count per year" src="https://bayanbox.ir/view/6536263889205795692/count-per-year.png"&gt;
+مشخصا علاقه‌ام به فیلم‌های کلاسیک کمتر است. (۱۹۰۲ هم فیلم می‌ساختند؟)&lt;/p&gt;
+&lt;p&gt;در هر سالی چند فیلم دیده‌ام؟ که خیلی دقیق نیست، چون بعضی از فیلم‌ها را فراموش می‌کردم امتیاز بدهم و بعدا که در سایت می‌دیدمشان امتیازشان را ثبت می‌کردم.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="watched per year" src="https://bayanbox.ir/view/5252771908555537462/watched-per-year.png"&gt;
+اوج فیلم دیدنم برای سال ۲۰۱۹ بوده و انگار کم کم دارد به صفر می‌رسد.&lt;/p&gt;
+&lt;p&gt;بیشتر از چه ژانر‌هایی دیده‌ام؟&lt;/p&gt;
+&lt;p&gt;&lt;img alt="genres" src="https://bayanbox.ir/view/8477955644776435410/genres.png"&gt;
+تقصیر من نیست، کلا فیلم‌هایی که درام محسوب می‌شوند بیشترند.&lt;/p&gt;
+&lt;p&gt;یک کاری که کردم این بود که اختلاف امتیازی که من به هر فیلم داده بودم را با امتیاز کلی فیلم اندازه گرفتم. به این صورت تفاوت سلیقه من با نظر عموم به چشم می‌آید. چه فیلمی را دیگران دوست داشته‌اند و من نه، یا برعکس. ۵ فیلم برتر بر این اساس:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="diff" src="https://bayanbox.ir/view/1489750020930049331/top-diff.png"&gt;&lt;/p&gt;
+&lt;p&gt;با این که به اخراجی‌های ۲ امتیاز ۵ داده‌ام، اما باز هم در این لیست جا گرفته. امتیاز اخراجی‌ها ۴.۸ است؟ من که خیلی خندیدم!&lt;/p&gt;
+&lt;p&gt;مقایسهٔ ژانر‌ها با همین معیار:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="genres average" src="https://bayanbox.ir/view/6922607975191264300/genres-avg.png"&gt;
+می‌دانستم که با فیلم ترسناک حال نمی‌کنم اما روحم هم خبر نداشت که به فیلم وسترن علاقه دارم! البته راستش امتیاز بالای وسترن و مستند بیشتر به خاطر این است که تعدادشان کم است و گزیده دیده‌ام.&lt;/p&gt;
+&lt;p&gt;سری هم به عوامل فیلم‌ها بزنیم. کدام کارگردان‌ها را دنبال می‌کنم؟&lt;/p&gt;
+&lt;p&gt;&lt;img alt="directors" src="https://bayanbox.ir/view/2649351484639625015/count-per-directors.png"&gt;
+محبوب‌ترین هایشان بر اساس میانگین امتیاز:
+&lt;img alt="directors average" src="https://bayanbox.ir/view/6577106460616939000/directors-avg.png"&gt;
+بیشتر از کدام بازیگران فیلم دیده‌ام؟
+&lt;img alt="acts" src="https://bayanbox.ir/view/2644768404352618284/acts.png"&gt;
+(نمی‌دانم چرا زیر این نمودار تعداد فیلم‌ها را به صورت اعشاری نشان داده می‌شود. نتوانستم درستش کنم. اگر راهش را می‌دانستید و مرا هم در جریان قرار دهید، خوش‌حال می‌شوم.)&lt;/p&gt;
+&lt;p&gt;و دست‌های پرکار پشت پرده:
+&lt;img alt="crew" src="https://bayanbox.ir/view/4630087938799969252/crew.png"&gt;&lt;/p&gt;
+&lt;p&gt;همهٔ این نمودارها و بیشتر از این‌ها در &lt;a href="https://colab.research.google.com/drive/1NARGnPz5qikv69UsszWinbYjhqdejdY2"&gt;این نوت‌بوک&lt;/a&gt;
+] آمده. اگر شما هم امتیاز فیلم‌هایی که دیده‌اید را در imdb ثبت کرده‌اید، می‌توانید آن را از داخل سایت اکسپورت کنید و با استفاده از این نوت‌بوک، این نتایج را برای فیلم‌های خودتان ببینید.&lt;/p&gt;</content><category term="فنی"></category><category term="فنی"></category><category term="فیلم"></category></entry><entry><title>اشتباه</title><link href="https://khoshi.net/mistake.html" rel="alternate"></link><published>2022-05-25T00:00:00+04:30</published><updated>2022-05-25T00:00:00+04:30</updated><author><name>محمدحسین خوش‌مهر</name></author><id>tag:khoshi.net,2022-05-25:/mistake.html</id><content type="html">&lt;p&gt;از &lt;a href="https://motamem.org/%d8%af%d8%b1%d8%b3-%da%af%d8%b1%d9%81%d8%aa%d9%86-%d8%b4%da%a9%d8%b3%d8%aa-%d9%85%d9%88%d9%81%d9%82%db%8c%d8%aa-%da%86%db%8c%d9%be-%d9%87%db%8c%d8%ab/"&gt;این&lt;/a&gt; پست متمم شروع شد. دعوت به گفت و گویی در مورد این جمله:
 &lt;img alt="شکست" src="https://motamem.org/wp-content/uploads/2018/08/chip-heath-fail-fast.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;اولش جمله منو جذب نکرد. بعد که شروع به خواندن کامنت‌ها کردم، کم کم جالب‌تر شد.
 این حرف‌ها قرار بود یک کامنت باشن، زیر همون پست. بعد که نوشتمش، دیدم شخصی‌تر از فضای متممه. از طرفی هم دیگه نوشته بودمش، گفتم به این بهانه این جا رو هم به‌روز کنم.&lt;/p&gt;
