@@ -268,3 +268,16 @@ hr::after {
   color: #777;
   letter-spacing: .5em;
 }
+
+@media only screen and (max-device-width: 768px) {
+  body {
+    max-width: initial;
+    padding: 0 1em;
+  }
+  article {
+    padding: 0 2em;
+  }
+  #article-list ol li a span {
+    font-size: 2em;
+  }
+}
