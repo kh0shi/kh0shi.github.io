@@ -277,6 +277,9 @@ hr::after {
   article {
     padding: 0 2em;
   }
+  p {
+    line-height: initial;
+  }
   #article-list ol li a span {
     font-size: 2em;
   }
